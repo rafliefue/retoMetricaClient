@@ -17,7 +17,7 @@ public class StatusService{
 	
 	RestTemplate rtplate = new RestTemplate();
 	
-	String url = "http://localhost:8080/";
+	String url = "http://localhost:8888/";
 	
 	public String open() {
 		String resourceUrl = url + "open";
@@ -28,10 +28,10 @@ public class StatusService{
 	}
 	
 	public String close() {
-		String resourceUrl = url + "close";
+		String resourceUrl = url + "closed";
 		
 		ResponseEntity<String> res = rtplate.getForEntity(URI.create(resourceUrl), String.class);
-		logger.info("ESTADO: CLOSE");
+		logger.info("ESTADO: CLOSED");
 		return res.getBody();
 	}
 	

@@ -1,19 +1,5 @@
-spring:
-  config:
-    activate:
-      on-profile:
-      - dev
-  application:
-    name: myvalue 
+spring: 
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8888   
----
-spring:  config:    activate:      on-profile:      - prod
-  application:
-    name: test 
-  cloud:
-    config:
-      enabled: true
-      uri: http://localhost:8888   
+      uri: http://localhost:8888
